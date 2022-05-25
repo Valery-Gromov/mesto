@@ -16,14 +16,16 @@
         <section class="profile">
             <img src="images/profile__avatar.jpg" alt="аватар пользователя" class="profile__avatar">
             <div class="profile__info">
-                <h1 class="profile__name">Жак-Ив Кусто</h1>
-                <button class="profile__edit-button">
-                    <img class="profile__edit-button-icon" src="images/profile__edit-button.svg"
-                        alt="Кнопка изменить профиль">
-                </button>
+                <div class="profile__name-container">
+                    <h1 class="profile__name">Жак-Ив Кусто</h1>
+                    <button class="profile__edit-button item-animation">
+                        <img class="profile__edit-button-icon" src="images/profile__edit-button.svg"
+                            alt="Кнопка изменить профиль">
+                    </button>
+                </div>
                 <p class="profile__discription">Исследователь океана</p>
             </div>
-            <button class="profile__add-button">
+            <button class="profile__add-button item-animation">
                 <img src="images/button__add.svg" alt="кнопка добавить">
             </button>
         </section>
@@ -81,12 +83,12 @@
     <div class="popup">
         <div class="popup__container">
             <h2 class="popup__header">Редактировать профиль</h2>
-            <form action="" class="popup__form">
+            <form action="#" class="popup__form">
                 <input type="text" placeholder="Жак-Ив Кусто" class="popup__field popup__name-field">
                 <input type="text" placeholder="Исследователь океана" class="popup__field popup__discription-field">
-                <button type="submit" class="popup_save">Сохранить</button>
+                <button type="submit" class="popup__save item-animation">Сохранить</button>
             </form>
-            <button class="popup__close"><img src="images/button__cross.svg" alt="закрыть"
+            <button class="popup__close item-animation"><img src="images/button__cross.svg" alt="закрыть"
                     class="popup__close-cross"></button>
         </div>
     </div>
