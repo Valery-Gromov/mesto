@@ -6,16 +6,19 @@
 @import url('../blocks/profile/profile.css');
 @import url('../blocks/profile/__avatar/profile__avatar.css');
 @import url('../blocks/profile/__info/profile__info.css');
+@import url('../blocks/profile/__name-container/profile__name-container.css');
 @import url('../blocks/profile/__name/profile__name.css');
 @import url('../blocks/profile/__edit-button/profile__edit-button.css');
 @import url('../blocks/profile/__edit-button-icon/profile__edit-button-icon.css');
 @import url('../blocks/profile/__discription/profile__discription.css');
 @import url('../blocks/profile/__add-button/profile__add-button.css');
 @import url('../blocks/elements/elements.css');
+@import url('../blocks/elements/__item/elements__item.css');
 @import url('../blocks/elements/__list/elements__list.css');
-@import url('../blocks/elements/__element/elements__element.css');
-@import url('../blocks/elements/__content/elements__content.css');
-@import url('../blocks/elements/__discription/elements__discription.css');
+@import url('../blocks/element/element.css');
+@import url('../blocks/element/__photo/element__photo.css');
+@import url('../blocks/element/__content/element__content.css');
+@import url('../blocks/element/__discription/element__discription.css');
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__copyright/footer__copyright.css');
 @import url('../blocks/popup/popup.css');
@@ -28,35 +31,4 @@
 @import url('../blocks/popup/__discription-field/popup__discription-field.css');
 @import url('../blocks/popup/__save/popup__save.css');
 @import url('../blocks/popup/__close/popup__close.css');
-
-.profile__name-container {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    column-gap: 18px;
-}
-
-.item-animation {
-    transition: opacity .1s linear;
-}
-
-.item-animation:hover {
-    opacity: .8;
-}
-
-@media screen and (max-width: 880px) {   
-
-}
-
-@media screen and (max-width: 780px) {
-
-}
-
-@media screen and (max-width: 450px) {
-
-}
-
-@media screen and (max-width: 320px) {
-
-}
+@import url('../blocks/item-animation/item-animation.css');
