@@ -9,5 +9,6 @@
     .profile__avatar {
         justify-self: center;
         align-self: start;
+        margin-bottom: 26px;
     }
 }

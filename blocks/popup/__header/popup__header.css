@@ -11,5 +11,6 @@
 @media screen and (max-width: 780px) {
     .popup__header {
         font-size: 18px;
+        margin-bottom: 75px;
     }
 }

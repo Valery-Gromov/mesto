@@ -11,4 +11,12 @@
     line-height: calc(22/18);
     text-align: center;
     color: #fff;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+    .popup__save {
+        max-width: 238px;
+        min-height: 46px;
+    }
 }

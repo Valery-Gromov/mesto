@@ -18,7 +18,7 @@
 @media screen and (max-width: 780px) {
     .profile {
         min-height: 286px;
-        grid-template-rows: 146px 90px 1fr;
+        grid-template-rows: auto auto auto;
         grid-template-columns: 1fr;
         grid-template-areas:
         'avatar'
