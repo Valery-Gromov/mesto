@@ -17,5 +17,6 @@
         justify-self: center;
         align-items: center;
         margin: 0 0 36px 0;
+        min-height: 54px;
     }
 }
