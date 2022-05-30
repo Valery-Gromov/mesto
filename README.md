@@ -15,4 +15,4 @@
 Рефакторинг кода в соответствии с комментариями ревьюера
 
 ## Ссылка на проект:
-https://github.com/Valery-Gromov/mesto.git
+https://valery-gromov.github.io/mesto/index.html
