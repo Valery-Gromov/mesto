@@ -42,7 +42,7 @@
     <div class="popup popup_type_edit">
         <div class="popup__container">
             <h2 class="popup__header">Редактировать профиль</h2>
-            <form name="popup" class="popup__form">
+            <form name="popup" class="popup__form popup__form_type_edit">
                 <input name="popup-name" type="text" placeholder="Жак-Ив Кусто"
                     class="popup__field popup__field_type_name">
                 <input name="popup-discription" type="text" placeholder="Исследователь океана"
@@ -59,9 +59,9 @@
             <h2 class="popup__header">Новое место</h2>
             <form name="popup-add" class="popup__form popup__form_type_add">
                 <input name="popup-place-name" type="text" placeholder="Название"
-                    class="popup__field popup__field_type_place-name">
+                    class="popup__field popup__field_type_place-name" required>
                 <input name="popup-place-link" type="text" placeholder="Ссылка на картинку"
-                    class="popup__field popup__field_type_place-link">
+                    class="popup__field popup__field_type_place-link" required>
                 <button type="submit" class="popup__save">Сохранить</button>
             </form>
             <button class="popup__close popup__close_place_add item-animation"><img src="images/button__cross.svg"
