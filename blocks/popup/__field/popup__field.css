@@ -1,5 +1,5 @@
 .popup__field {
-    max-width: 358px;
+    width: 100%;
     min-height: 27px;
     padding: 0;
     border: none;

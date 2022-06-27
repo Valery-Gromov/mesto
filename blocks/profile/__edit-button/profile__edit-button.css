@@ -10,6 +10,10 @@
     cursor: pointer;
 }
 
+.profile__edit-button:disabled {
+    opacity: .2;
+}
+
 @media screen and (max-width: 780px) {
     .profile__edit-button {
         position: absolute;
