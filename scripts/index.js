@@ -41,6 +41,8 @@ const popupCardNameField = addCardForm.querySelector('.popup__field_type_place-n
 const popupCardLinkField = addCardForm.querySelector('.popup__field_type_place-link');
 const cardTemplate = document.querySelector('.template-card');
 const popupImageZoom = document.querySelector('.popup_type_image');
+const popupImageZoomHeader = popupImageZoom.querySelector('.popup__header_place_image');
+const popupImageZoomLink = popupImageZoom.querySelector('.popup__image');
 
 function fillPopupEditFields() {
     popupNameField.value = profileName.textContent;
@@ -51,16 +53,16 @@ const closePopupByEsc = (evt) => {
     if (evt.key === 'Escape') {
         const popup = document.querySelector('.popup_opened');
         if (popup) {
-           popup.classList.remove('popup_opened');
+           closePopup(popup);
         };
     };
 };
 
 const closePopupByOverlay = (e) => {
     if(e.target === e.currentTarget) {
-        const popup = document.querySelector('.popup_opened');
+        const popup = e.target;
         if (popup) {
-           popup.classList.remove('popup_opened');
+           closePopup(popup);
         };
     };
   };
@@ -69,12 +71,16 @@ function openPopup(popupElement) {
     popupElement.classList.add('popup_opened');
 
     popupElement.addEventListener('click', closePopupByOverlay);
+
+    document.addEventListener('keyup', closePopupByEsc);
 };
 
 function closePopup(popupElement) {
     popupElement.classList.remove('popup_opened');
 
     popupElement.removeEventListener('click', closePopupByOverlay);
+
+    document.removeEventListener('keyup', closePopupByEsc);
 }
 
 buttonEdit.addEventListener('click', () => {
@@ -126,7 +132,9 @@ const createCard = function(name, link) {
         .cloneNode(true);
         
     card.querySelector('.element__photo').src = link;
+    card.querySelector('.element__photo').alt = name;
     card.querySelector('.element__discription').textContent = name;
+    
 
     card.querySelector('.element__delete').addEventListener('click', deleteCard);
 
@@ -137,8 +145,9 @@ const createCard = function(name, link) {
 
         openPopup(popupImageZoom);
 
-        popupImageZoom.querySelector('.popup__header_place_image').textContent = name;
-        popupImageZoom.querySelector('.popup__image').src = link;
+        popupImageZoomHeader.textContent = name;
+        popupImageZoomLink.src = link;
+        popupImageZoomLink.alt = name;
     });
 
     
@@ -167,9 +176,9 @@ const handleCardSubmit = evt => {
 
     addCardForm.reset();
 
+    enableValidation();
+
     closePopup(popupAdd);
 }
 
 addCardForm.addEventListener('submit', handleCardSubmit);
-
-document.addEventListener('keyup', closePopupByEsc);
