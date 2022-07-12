@@ -10,10 +10,6 @@ const validationObject = {
 const showInputError = (validationObject,formElement, inputElement, errorMessage) => {
    const errorElement = formElement.querySelector(`#${inputElement.id}-error`);
 
-    console.log(formElement);
-    console.log(`#${inputElement.id}-error`);
-    console.log(errorElement);
-
     inputElement.classList.add(validationObject.inputErrorClass);
 
     errorElement.textContent = errorMessage;
@@ -34,12 +30,20 @@ const hasInvalidInput = inputList => {
     });
 };
 
+const enableSubmitButton = buttonElement => {
+    buttonElement.disabled = false;
+}
+
+const disableSubmitButton = buttonElement => {
+    buttonElement.disabled = true;
+}
+
 const toggleButtonState = (inputList, buttonElement) => {
     if (hasInvalidInput(inputList)) {
-        buttonElement.disabled = true;
+        disableSubmitButton(buttonElement);
     } else {
-        buttonElement.disabled = false;
-    }
+        enableSubmitButton(buttonElement);
+    };
 };
 
 const isValid = (formElement, inputElement) => {
@@ -53,8 +57,6 @@ const isValid = (formElement, inputElement) => {
 const setEventListeners = (validationObject ,formElement) => {
     const inputList = Array.from(formElement.querySelectorAll(validationObject.inputSelector));
     const buttonElement = formElement.querySelector(validationObject.submitButtonSelector);
-
-    console.log(inputList);
 
     toggleButtonState(inputList, buttonElement);
 
@@ -80,3 +82,4 @@ const enableValidation = (validationObject) => {
 };
 
 enableValidation(validationObject);
+

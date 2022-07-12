@@ -81,7 +81,9 @@ function closePopup(popupElement) {
     popupElement.removeEventListener('click', closePopupByOverlay);
 
     document.removeEventListener('keyup', closePopupByEsc);
-}
+
+    // enableValidation(validationObject);
+};
 
 buttonEdit.addEventListener('click', () => {
     openPopup(popupEdit);
@@ -98,6 +100,11 @@ popupAddCloseButton.addEventListener('click', () => {
 
 buttonAdd.addEventListener('click', () => {
     openPopup(popupAdd);
+    
+    const submitAddButton = popupAdd.querySelector('.popup__save'); 
+
+    disableSubmitButton(submitAddButton);
+    
 });
 
 popupEditForm.addEventListener('submit', function(evt) {
@@ -175,8 +182,6 @@ const handleCardSubmit = evt => {
     addCard(cardInfo);
 
     addCardForm.reset();
-
-    enableValidation();
 
     closePopup(popupAdd);
 }
