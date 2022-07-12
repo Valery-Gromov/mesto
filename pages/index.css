@@ -48,6 +48,7 @@
 @import url('../blocks/popup/__field-error/popup__field-error.css');
 @import url('../blocks/popup/__field-error/_active/popup__field-error_active.css');
 @import url('../blocks/popup/__save/popup__save.css');
+@import url('../blocks/popup/__save/_place/popup__save_place_add.css');
 @import url('../blocks/popup/__close/popup__close.css');
 @import url('../blocks/popup/__close/_place/popup__close_place_add.css');
 @import url('../blocks/popup/__close/_place/popup__close_place_edit.css');

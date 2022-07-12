@@ -81,8 +81,6 @@ function closePopup(popupElement) {
     popupElement.removeEventListener('click', closePopupByOverlay);
 
     document.removeEventListener('keyup', closePopupByEsc);
-
-    // enableValidation(validationObject);
 };
 
 buttonEdit.addEventListener('click', () => {
@@ -101,7 +99,7 @@ popupAddCloseButton.addEventListener('click', () => {
 buttonAdd.addEventListener('click', () => {
     openPopup(popupAdd);
     
-    const submitAddButton = popupAdd.querySelector('.popup__save'); 
+    const submitAddButton = popupAdd.querySelector('.popup__save_place_add'); 
 
     disableSubmitButton(submitAddButton);
     
