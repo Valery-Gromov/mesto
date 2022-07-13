@@ -43,6 +43,7 @@ const cardTemplate = document.querySelector('.template-card');
 const popupImageZoom = document.querySelector('.popup_type_image');
 const popupImageZoomHeader = popupImageZoom.querySelector('.popup__header_place_image');
 const popupImageZoomLink = popupImageZoom.querySelector('.popup__image');
+const submitAddButton = popupAdd.querySelector('.popup__save_place_add'); 
 
 function fillPopupEditFields() {
     popupNameField.value = profileName.textContent;
@@ -98,8 +99,6 @@ popupAddCloseButton.addEventListener('click', () => {
 
 buttonAdd.addEventListener('click', () => {
     openPopup(popupAdd);
-    
-    const submitAddButton = popupAdd.querySelector('.popup__save_place_add'); 
 
     disableSubmitButton(submitAddButton);
     
